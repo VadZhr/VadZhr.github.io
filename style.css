@@ -27,8 +27,9 @@ body {
 .center {
     width: 50%;
     min-height: 50%;
-    background-image: url("https://images.satu.kz/187607221_w700_h500_originalnye-basketbolnye-krossovki.jpg" );
+    background-image: url("https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/c19ad0dc-e5e0-4508-8fa8-04fc55cd3ab7/air-jordan-36-low-luka-dn4196-430-release-date.jpg" );
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
     transition-duration: .3s;
     display: flex;
