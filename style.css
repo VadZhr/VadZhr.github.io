@@ -16,8 +16,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    /* background-image: url("https://images.satu.kz/187607221_w700_h500_originalnye-basketbolnye-krossovki.jpg");
-    background-repeat: no-repeat; */
+    /* background-image: url("https://images.satu.kz/187607221_w700_h500_originalnye-basketbolnye-krossovki.jpg"); */
+    background-repeat: no-repeat;
     background-size: 500px 500px;
     width: 100%;
     height: 100%;
@@ -27,7 +27,7 @@ body {
 .center {
     width: 50%;
     min-height: 50%;
-    /* background-image: url("https://images.satu.kz/187607221_w700_h500_originalnye-basketbolnye-krossovki.jpg" ); */
+    background-image: url("https://images.satu.kz/187607221_w700_h500_originalnye-basketbolnye-krossovki.jpg" );
     background-repeat: no-repeat;
     background-position: center;
     transition-duration: .3s;
