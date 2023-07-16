@@ -1,108 +1,192 @@
 body {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
     width: 100vw;
-    height: 100vh;
-    /* padding: -0px 500px; */
     box-sizing: border-box;
+    padding: 0 120px;
+    
 }
-.container {
+.global-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    /* background-image: url("https://images.satu.kz/187607221_w700_h500_originalnye-basketbolnye-krossovki.jpg"); */
-    background-repeat: no-repeat;
-    background-size: 500px 500px;
     width: 100%;
-    height: 100%;
+    min-height: 70px;
     box-sizing: border-box;
-    gap: 20px;  
 }
-.center {
-    width: 50%;
-    min-height: 50%;
-    background-image: url("https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/c19ad0dc-e5e0-4508-8fa8-04fc55cd3ab7/air-jordan-36-low-luka-dn4196-430-release-date.jpg" );
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    transition-duration: .3s;
+.header1 {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    
+    width: 100%;
+    gap: 20px;
 }
-.center::after {
-    content: "ПОПАЛСЯ ПИДОР";
-    display: none;
-    font-size: 35px;
-    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rainbow 20s ease infinite;
-    background-size: 400% 400%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 400px;
-    text-align: center;
-}
-.center:hover {
-    background-image:url( "https://avatars.dzeninfra.ru/get-zen_doc/1898242/pub_5ff2aaebfe4e686f6ab4ba47_60d87897a487630a3f07e1e0/scale_1200");
-    width: 50%;
-    background-size: contain;
-    min-height: 50%;
-}
-.center:hover~.rainbow-animated{
-    display: none;
-}
-.center:hover::after {
+.header1 > .left-side, .right-side  {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 40px;
+    /* gap: 5px; */
 }
-/* .center:hover ~ .center {
-    z-index: 0;
-} */
-
-.rainbow {
+* a{
     text-decoration: none;
-    font-size: 35px;
     color: black;
 }
-.rainbow-animated {
-    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: rainbow 20s ease infinite;
-    animation: rainbow 20s ease infinite;
-    font-size: 35px;
-    line-height: 25px;
-    padding-bottom: 120px;
-  }
-  .one {
-    padding: 5px;
-  }
-  @-webkit-keyframes rainbow {
-    0% { background-position: 0% 50% }
-    50% { background-position: 100% 50% }
-    100% { background-position: 0% 50% }
-  }
-   
-  @keyframes rainbow {
-    0% { background-position: 0% 50% }
-    50% { background-position: 100% 50% }
-    100% { background-position: 0% 50% }
-  }
-  
-  @media screen and (max-width:728px) {
-    * a{
-        font-size: 35px;
-        text-align: center;
-        
+* a:hover{
+    text-decoration: none;
+    color: silver;
+}
+.header1  .left-side> .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header1 > .left-side {
+    justify-content: flex-start;
+}
+.header1 > .right-side {
+    justify-content: flex-end;
+}
+.header1  .right-side> .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dodo {
+    width: 150px;
+}
+.coin {
+    width: 30px;
+    height: 30px;
+}
+.header2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    width: 100%;
+
+}
+.header2 >.left-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 70px;
+    width: 50%;
+    gap: 20px;
+}
+.header2 >.right-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 70px;
+    width: 50%;
+    gap: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.container > .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 350px;
+    border: 1px solid orange;
+    border-radius: 50px;
+}
+
+.container > .box > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+.container > .box > .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 80%;
+    height: 40%;
+}
+.container > .box > .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 80%;
+    height: 40%;
+}
+.container > .box  {
+    background-image: url("https://sun9-72.userapi.com/impg/hNfMryw3zPUPYHqLQTQQOVxgQ6JdvEHsyH3jag/YP1-pb4O2bo.jpg?size=807x807&quality=95&sign=72b15998e9f6f1f037eca4e34506276a&c_uniq_tag=MWYB57aSaP7sn1jm3KrrTej5o4QjcWROGuwjetm3G5k&type=album");
+    background-size: cover;
+}
+.container > .box > .bottom, .top > span {
+    color: white;
+    font-size: 30px;
+}
+@media screen and (max-width:728px) 
+{
+    .global-header > .header1  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
-     
-  }
+    .global-header > .header1 > .left-side, .right-side {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .global-header > .header1 > .dododo {
+        display: none;
+    }
+    .global-header > .header2  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+  
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .global-header > .header2 > .left-side, .right-side {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .global-header > .header2 > .right-side {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
