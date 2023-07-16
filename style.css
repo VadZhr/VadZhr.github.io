@@ -309,4 +309,7 @@ body {
     .header3 {
         justify-content: center;
     }
+    .adaptive {
+        width: 200px;
+    }
 }
