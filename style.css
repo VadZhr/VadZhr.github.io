@@ -27,6 +27,15 @@ body {
     width: 100%;
     gap: 20px;
 }
+.header1 > .left-side  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 40px;
+    /* gap: 5px; */
+}
 .header1 > .left-side, .right-side  {
     display: flex;
     flex-direction: row;
@@ -47,8 +56,9 @@ body {
 .header1  .left-side> .box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+     width: 190px;
     
 }
 .header1 > .left-side {
@@ -64,6 +74,30 @@ body {
     align-items: center;
     
 }
+.header1  .right-side> .dodocoin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    border-radius: 8px;
+    background-color: orange;
+    color: white;
+    
+}
+.header1  .right-side> .in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 25px;
+    border-radius: 8px;
+    background-color: silver;
+    color: black;
+    
+}
 .dodo {
     width: 150px;
 }
@@ -74,7 +108,7 @@ body {
 .header2 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     min-height: 70px;
     width: 100%;
@@ -92,11 +126,29 @@ body {
 .header2 >.right-side {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    min-height: 70px;
-    width: 50%;
+    min-height: 25px;
+    width: 100px;
     gap: 20px;
+    background-color: orange;
+    color: white;
+    border-radius: 8px;
+}
+.header2 >.right-side a {
+    
+    color: white;
+    
+}
+.header3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 21px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
 }
 .container {
     display: flex;
@@ -112,7 +164,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    min-width: 250px;
     height: 350px;
     border: 1px solid orange;
     border-radius: 50px;
@@ -139,8 +191,9 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    width: 80%;
-    height: 40%;
+    width: 200px;
+    height: 100px;
+    color: black;
 }
 .container > .box  {
     background-image: url("https://sun9-72.userapi.com/impg/hNfMryw3zPUPYHqLQTQQOVxgQ6JdvEHsyH3jag/YP1-pb4O2bo.jpg?size=807x807&quality=95&sign=72b15998e9f6f1f037eca4e34506276a&c_uniq_tag=MWYB57aSaP7sn1jm3KrrTej5o4QjcWROGuwjetm3G5k&type=album");
@@ -150,27 +203,90 @@ body {
     color: white;
     font-size: 30px;
 }
+.second > .box {
+    background-image: none;
+    
+    align-items: center;
+}
+.second > .box > .top  {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: none;
+}
+.second > .box > .top > img {
+    display: flex;
+    width: 250px;
+    height: 200px;
+    background-image: none;
+}
+.second > .box > .bottom {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    color: black;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.second > .box > .bottom > .name{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+.second > .box > .bottom > .take{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+   
+}
 @media screen and (max-width:728px) 
 {
     .global-header > .header1  {
         flex-direction: column;
-        justify-content: center;
+        
         align-items: center;
-
+        justify-content: flex-start;
     }
-    .global-header > .header1 > .left-side, .right-side {
+    .global-header > .header1 > div    {
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
     }
-    .global-header > .header1 > .dododo {
+    .global-header > .header1 > .left-side  {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+    }
+    .global-header > .header1 > .right-side  {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+    }
+    .global-header > .header1 > .left-side> .box  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .global-header > .header1 > .left-side > .dododo {
         display: none;
     }
     .global-header > .header2  {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 15px;
 
     }
   
@@ -188,5 +304,9 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 15px;
+    }
+    .header3 {
+        justify-content: center;
     }
 }
