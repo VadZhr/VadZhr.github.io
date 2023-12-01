@@ -26,7 +26,7 @@
       display: flex;
       flex-direction: row;
       width: 100vw;
-      height: 100vh;
+      height: auto;
       align-items: center;
       justify-content: center;
     }
@@ -49,9 +49,8 @@
       background-size: auto 100%;
       color: white;
       background-repeat: no-repeat;
-    
     }
-    
+
     #dateInfo {
       display: flex;
       flex-direction: column;
@@ -165,6 +164,7 @@
       background-color: rgba(182, 236, 240, 0.9);
       border-radius: 10px 0 0 10px;
       font-size: 20px;
+      
     }
     #get {
       height: 99%;
@@ -191,7 +191,7 @@
       color: red;
     }
     #filter {
-        display: flex;
+      display: flex;
       flex-direction: column;
       justify-content: space-between;
       width: 100%;
@@ -206,28 +206,48 @@
       border-radius: 30px;
       z-index: 1;
     }
+    @media screen and (max-width: 768px) {
+      #container {
+        flex-direction: column;
+        width: 450px;
+      }
+      #mainInfo{
+        width:  450px;
+      }
+      body {
+        justify-content: flex-start;
+      }
+      #fullInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(34, 40, 49, 1);
+      width: 450px;
+      height: 623px;
+      border-radius: 25px;
+    }
+    }
   </style>
   <body>
     <div id="container">
       <div id="mainInfo">
         <div id="filter">
-        <div id="dateInfo">
-          <div id="day"></div>
-          <div id="date"></div>
-          <div id="city"></div>
+          <div id="dateInfo">
+            <div id="day"></div>
+            <div id="date"></div>
+            <div id="city"></div>
+          </div>
+          <div id="temp">
+            <img
+              id="icon"
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt=""
+            />
+            <div id="temperature"></div>
+            <div id="disc"></div>
+          </div>
         </div>
-        <div id="temp">
-          <img
-            id="icon"
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt=""
-          />
-          <div id="temperature"></div>
-          <div id="disc"></div>
-        </div>
-     
-        </div>
-        
       </div>
       <div id="fullInfo">
         <div id="wethDisc">
@@ -284,7 +304,7 @@
         </div>
 
         <div id="change">
-          <input id="inpt" type="text" />
+          <input id="inpt" type="text" placeholder="Choose location" />
           <button id="get">GET</button>
         </div>
         <div id="error">NOT FOUND</div>
