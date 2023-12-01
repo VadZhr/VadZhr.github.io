@@ -97,7 +97,7 @@ async function weather(city) {
   }
 //  https://media.istockphoto.com/id/489356853/photo/monument-of-independence.jpg?s=2048x2048&w=is&k=20&c=hzhrfq9OAi6JMZzPu8pGowHsIGZZs9hXuvcrkMTo2Ls=
   if(wethres.city.name == "Karaganda"){
-    mainInfo.style.backgroundImage =`url('https://media.istockphoto.com/id/489356853/photo/monument-of-independence.jpg?s=2048x2048&w=is&k=20&c=hzhrfq9OAi6JMZzPu8pGowHsIGZZs9hXuvcrkMTo2Ls=')`
+    mainInfo.style.backgroundImage =`url('https://kazpravda.kz/media/news/2023/09/28/photo_2023-09-28_11-19-02.jpg')`
   }
   console.log(cityPic);
   // `http://api.openweathermap.org/data/2.5/forecast/daily?lat=${result[0].lat}&lon=${result[0].lon}&cnt=${"2"}&appid=0e1ff8de16a411015b650623b6b1c8df
