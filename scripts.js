@@ -74,7 +74,7 @@ if(localStorage.getItem(userID)!=null){
 // localStorage.clear()
 async function weather(city) {
   let response = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=0e1ff8de16a411015b650623b6b1c8df`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=0e1ff8de16a411015b650623b6b1c8df`
   );
   let result = await response.json();
   console.log(result);
