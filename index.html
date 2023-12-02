@@ -96,6 +96,7 @@
       align-items: center;
       justify-content: space-between;
       background-color: rgba(34, 40, 49, 1);
+      transition-duration: 0.3s;
       width: 518px;
       height: 623px;
       border-radius: 0 25px 25px 0;
@@ -164,7 +165,6 @@
       background-color: rgba(182, 236, 240, 0.9);
       border-radius: 10px 0 0 10px;
       font-size: 20px;
-      
     }
     #get {
       height: 99%;
@@ -205,54 +205,81 @@
       opacity: 1;
       border-radius: 30px;
       z-index: 1;
+      transition-duration: .3;
+    }
+    #theme {
+      display: flex;
+      width: 80px;
+      height: 40px;
+      margin: auto;
+      background-color: black;
+      position: absolute;
+      border-radius: 20px;
+      z-index: 1;
+      margin-top: 600px;
+      margin-left: 75%;
+    }
+    #circle {
+      display: flex;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      transition-duration: 0.3s;
+    }
+    #themeName {
+      display: flex;
+      position: absolute;
+      margin-top: 10px;
+      margin-left: 42px;
+      transition-duration: 0.3s;
     }
     @media screen and (max-width: 768px) {
       #container {
         flex-direction: column;
         width: 400px;
       }
-      #mainInfo{
-        width:  400px;
+      #mainInfo {
+        width: 400px;
       }
       body {
         justify-content: flex-start;
-       
-
       }
       #fullInfo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      background-color: rgba(34, 40, 49, 1);
-      width: 400px;
-      height: 500px;
-      border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(34, 40, 49, 1);
+        width: 400px;
+        height: 500px;
+       
+        border-radius: 25px;
+      }
+      #wethDisc {
+        margin-top: 40px;
+        width: 400px;
+      }
+      #wethDisc > div {
+        font-size: 21px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      #nextDays > div {
+        width: 95px;
+        height: 140px;
+      }
+      #change {
+        width: 390px;
+      }
+      #history {
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
     }
-    #wethDisc {
-      margin-top: 40px;
-      width: 400px;
-    
-    }
-    #wethDisc > div {
-      font-size: 21px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-    #nextDays > div {
-      width: 95px;
-      height: 140px;
-    }
-    #change {
-      width: 390px;
-    }
-    #history{
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-  }
   </style>
   <body>
     <div id="container">
@@ -273,6 +300,7 @@
             <div id="disc"></div>
           </div>
         </div>
+        <div id="theme"><div id="circle"></div><div id="themeName">Dark</div></div>
       </div>
       <div id="fullInfo">
         <div id="wethDisc">
