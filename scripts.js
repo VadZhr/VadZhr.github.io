@@ -39,13 +39,14 @@ let allTheme = "dark";
 let cards = Array.from(document.getElementById("nextDays").children);
 let fullCard = [...document.querySelectorAll("#fullInfo > *>*>*")];
 let allText = document.querySelectorAll("*");
-circle.onclick = function (e) {
+circle.onclick = function () {
+  console.log(1);
   if (theme == "dark") {
-    e.target.style.marginLeft = "40px";
+    circle.style.marginLeft = "40px";
     themeName.style.marginLeft = "3px";
     // themeName.style.marginTop = "11px";
     themeName.style.fontSize = "14.5px";
-    themeName.textContent = "White";
+    themeName.textContent = "Light";
     circle.style.backgroundColor = "black";
     theme_.style.backgroundColor = "white";
     themeName.style.color = "black";
@@ -78,8 +79,8 @@ circle.onclick = function (e) {
     change.style.backgroundColor = "#DCEBEB";
     get.style.backgroundColor = "#DCEBEB";
     theme = "white";
-  } else if (theme == "white") {
-    e.target.style.marginLeft = "0px";
+  } else if (theme == 'white') {
+    circle.style.marginLeft = "0px";
     themeName.style.marginLeft = "42px";
     // themeName.style.marginTop = "10px";
     themeName.style.fontSize = "16px";
@@ -119,6 +120,87 @@ circle.onclick = function (e) {
     });
   }
 };
+theme_.onclick = function(e){
+  if (theme == "dark" && e.target !== circle) {
+    circle.style.marginLeft = "40px";
+    themeName.style.marginLeft = "3px";
+    // themeName.style.marginTop = "11px";
+    themeName.style.fontSize = "14.5px";
+    themeName.textContent = "Light";
+    circle.style.backgroundColor = "black";
+    theme_.style.backgroundColor = "white";
+    themeName.style.color = "black";
+    fullInfo.style.backgroundColor = "#F7E2E1";
+    // filter.style.backgroundColor = "rgba(232, 231, 231, 0.4)"
+    // allText.forEach(el =>{
+    //   if(el !=themeName){
+    //     el.style.color = "black"
+    //   }
+    // })
+    cards.forEach((el) => {
+      el.style.backgroundColor = "#ECA4A4";
+    });
+    fullCard.forEach((el) => {
+      el.style.color = "rgba(34, 40, 49, 1)";
+    });
+    allReqs.forEach((el) => {
+      el.style.color = "rgba(34, 40, 49, 1)";
+      el.style.border = "1px solid rgba(34, 40, 49, 1)";
+      el.addEventListener("mouseover", (e) => {
+        e.preventDefault();
+        e.target.style.backgroundColor = "rgb(212, 216, 222)";
+      });
+      el.addEventListener("mouseout", (e) => {
+        e.preventDefault();
+        e.target.style.backgroundColor = "";
+      });
+    });
+    inpt.style.backgroundColor = "#DCEBEB";
+    change.style.backgroundColor = "#DCEBEB";
+    get.style.backgroundColor = "#DCEBEB";
+    theme = "white";
+  } else if (theme == "white" && e.target !== circle) {
+    circle.style.marginLeft = "0px";
+    themeName.style.marginLeft = "42px";
+    // themeName.style.marginTop = "10px";
+    themeName.style.fontSize = "16px";
+    themeName.textContent = "Dark";
+    circle.style.backgroundColor = "white";
+    theme_.style.backgroundColor = "black";
+    themeName.style.color = "white";
+    fullInfo.style.backgroundColor = "rgba(34, 40, 49, 1)";
+    // filter.style.backgroundColor = "rgba(0, 0, 0, 0.4)"
+    theme = "dark";
+    // allText.forEach(el =>{
+    //   if(el !=themeName){
+    //     el.style.color = "white"
+    //   }
+    // })
+    fullCard.forEach((el) => {
+      el.style.color = "white";
+    });
+    cards.forEach((el) => {
+      el.style.backgroundColor = " rgb(120, 131, 147)";
+    });
+    inpt.style.backgroundColor = "rgba(144, 217, 224, 0.9)";
+    change.style.backgroundColor = "rgba(144, 217, 224, 0.9)";
+    get.style.backgroundColor = "rgba(144, 217, 224, 0.9)";
+    theme = "dark";
+    allReqs.forEach((el) => {
+      el.style.color = "white";
+      el.style.border = "1px solid white";
+      el.addEventListener("mouseover", (e) => {
+        e.preventDefault();
+        e.target.style.backgroundColor = "rgb(73, 85, 100)";
+      });
+      el.addEventListener("mouseout", (e) => {
+        e.preventDefault();
+        e.target.style.backgroundColor = "";
+      });
+    });
+  }
+}
+
 let reqs = [];
 let cities = [];
 let index = 0;
@@ -146,7 +228,7 @@ if (localStorage.getItem("theTheme") != null) {
     themeName.style.marginLeft = "3px";
     // themeName.style.marginTop = "11px";
     themeName.style.fontSize = "14.5px";
-    themeName.textContent = "White";
+    themeName.textContent = "Light";
     circle.style.backgroundColor = "black";
     theme_.style.backgroundColor = "white";
     themeName.style.color = "black";
