@@ -424,7 +424,7 @@ async function weather(city) {
       let div = document.createElement("div");
       div.style.color = "white";
       div.textContent = wethres.city.name;
-      div.style.padding = "2px";
+      // div.style.padding = "2px";
       allReqs = document.querySelectorAll(".reqs");
       div.addEventListener("click", (e) => {
         e.preventDefault();
